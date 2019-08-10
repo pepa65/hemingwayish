@@ -1,0 +1,11 @@
+.adverb{background:#7ae}
+.qualifier{background:#ddd}
+.passive{background:#ce9}
+.complex{background:#ece}
+.hardSentence{background:#fec}
+.veryHardSentence{background:#ebb}
+#text-area,#output{width:100%}
+textarea{font-family:sans; background:#eee}
+#left{width:76%; position:absolute; left:1%; padding-bottom:50em}
+#right{width:22%; position:absolute; right:.5%; padding-bottom:50em}
+.counter{position:relative; padding:2% 5%; margin:2% 0 0 5%; border-radius:0}
