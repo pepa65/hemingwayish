@@ -8,8 +8,7 @@
 		`Lengthy, complex sentences and common errors are highlighted; if you see a yellow sentence, shorten or split it. If you see a red highlight, your sentence is so dense and complicated that your readers will get lost trying to follow its meandering, splitting logic - try editing this sentence to remove the red.
 You can utilize a shorter word instead of a longer and more complex purple one.
 Phrases in green have been marked to show passive voice.
-Adverbs and weakening phrases are helpfully shown in blue and (I think) gray. Elvaluate and eliminate them if you can, picking words with force.
-`;
+Adverbs and weakening phrases are helpfully shown in blue and (I think) gray. Elvaluate and eliminate them if you can, picking words with force.`;
 	inputArea.value = text;
 	let data = {
 		paragraphs: 0,
@@ -129,7 +128,6 @@ Adverbs and weakening phrases are helpfully shown in blue and (I think) gray. El
 
 	function findAndSpan(sentence, string, type){
 		let index = sentence.toLowerCase().indexOf(string);
-		//let a = { complex: "complex", qualifier: "adverbs" };
 		let a = { complex: "complex", qualifier: "qualifying" };
 		if (index >= 0){
 			data[a[type]] += 1;
@@ -161,6 +159,7 @@ Adverbs and weakening phrases are helpfully shown in blue and (I think) gray. El
 			"i was wondering": 1,
 			"i will try": 1,
 			"i wonder": 1,
+			"i would think": 1,
 			"in my opinion": 1,
 			"is kind of": 1,
 			"is sort of": 1,
@@ -183,8 +182,8 @@ Adverbs and weakening phrases are helpfully shown in blue and (I think) gray. El
 			"we were wondering": 1,
 			"we will try": 1,
 			"we wonder": 1,
-		};
-	}
+			"we woud think": 1,
+		};}
 
 	function getLyWords(){
 		return {
@@ -559,46 +558,5 @@ Adverbs and weakening phrases are helpfully shown in blue and (I think) gray. El
 			"with respect to": ["on", "about"],
 			"with the exception of": ["except for"],
 			witnessed: ["saw", "seen"],
-		};}
-
-	function getJustifierWords(){
-		return {
-			"i believe": 1,
-			"i consider": 1,
-			"i don't believe": 1,
-			"i don't consider": 1,
-			"i don't feel": 1,
-			"i don't suggest": 1,
-			"i don't think": 1,
-			"i feel": 1,
-			"i hope to": 1,
-			"i might": 1,
-			"i suggest": 1,
-			"i think": 1,
-			"i was wondering": 1,
-			"i will try": 1,
-			"i wonder": 1,
-			"in my opinion": 1,
-			"is kind of": 1,
-			"is sort of": 1,
-			just: 1,
-			maybe: 1,
-			perhaps: 1,
-			possibly: 1,
-			"we believe": 1,
-			"we consider": 1,
-			"we don't believe": 1,
-			"we don't consider": 1,
-			"we don't feel": 1,
-			"we don't suggest": 1,
-			"we don't think": 1,
-			"we feel": 1,
-			"we hope to": 1,
-			"we might": 1,
-			"we suggest": 1,
-			"we think": 1,
-			"we were wondering": 1,
-			"we will try": 1,
-			"we wonder": 1,
 		};}
 })();
